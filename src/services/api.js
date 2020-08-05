@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ethers } from 'ethers';
 
 const dexagClient = axios.create({
-  baseURL: 'https://api.dex.ag/',
+  baseURL: 'https://api-v2.dex.ag/',
 });
 
 const api = {
@@ -24,7 +24,7 @@ const api = {
   },
   async getTrade(params) {
     const dexagClient = axios.create({
-      baseURL: 'https://api.dex.ag/',
+      baseURL: 'https://api-v2.dex.ag/',
     });
     const response = await dexagClient.get('/trade', { params });
     const trade = response.data;
@@ -32,7 +32,7 @@ const api = {
   },
   async getPrice(params) {
     const dexagClient = axios.create({
-      baseURL: 'https://api.dex.ag/',
+      baseURL: 'https://api-v2.dex.ag/',
     });
     const response = await dexagClient.get('/price', { params });
     const price = response.data;
